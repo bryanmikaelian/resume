@@ -1,19 +1,52 @@
 # Jobs
-# VP of Global Communications
 - company: Netlify
-  position: Staff Backend Software Engineer
-  # duration: Oct, 2013 &mdash; Present
-  # summary: Write about your core competencies in one or two sentences describing your position. If you held the position for a long time, it could be a longer section, including a couple bullet points	<ul class="resume-item-list"><li>A project you are proud of</li><li>Another awesome project</li><li>or a team or department you worked with</li></ul>
+  position: Staff Backend Engineer, Billing
+  duration: June 2022 &mdash; Present
+  summary: "Currently a platform engineer charged with scaling Netlify's control plane and core APIs. Also the primary owner and lead engineer for all of Netlify's billing systems and usage data pipelines. Core technologies are Ruby and Golang services, Kafka, Clickhouse, and MongoDB. Also helping lead efforts to improve Netlify's monitoring and observability with Datadog by improving monitors, writing better runbooks and training other ICs on best practices for monitoring software in production.
+  <br />
+  <br />
+  Key projects include:
+    <ul>
+      <li>Migration from AWS Redshift to Clickhouse for all usage-based data with 0 downtime</li>
+      <li>Migration of all background jobs from a legacy version of redis with 0 dataloss</li>
+      <li>Project lead for removal of legacy billing system for Netlify's Build Minutes feature</li>
+      <li>Re-architecting Netlify's nightly billing jobs, reducing runtime from 8 hours to 3 minutes</li>
+    </ul>
+  "
 
-# Director of Digital Stratgy
+
+- company: Netlify
+  position: Senior Backend Engineer, Billing
+  duration: January 2022 &mdash; June 2022
+  summary: Responsible for exposing new platform, billing-centric APIs for the control plane and FE to consume. Core technologies used were Ruby on Rails, Redis, and MongoDB. Also helped improved and scale billing infrastructure as customer growth accelerated especially in the enterprise space
+
+- company: Netlify
+  position: Senior Backend Engineer, Growth
+  duration: October 2020 &mdash; January 2022
+  summary:
+    "Founding member of the Growth Team that helped build a team capable of running sophisticated growth experiments in the product using data backends and APIs
+  Key projects include:
+    <ul>
+      <li>Implementation of a framework for collecting Segment data and streamlining how teams track user activity in Netlify</li>
+      <li>Foundational work for running growth experienments at Netlify using Segment Data and MongoDB</li>
+    </ul>
+  "
 - company: Segment
   position: Software Engineer
-  # duration:  Jun, 2010 &mdash; Sept, 2013
-  # summary: If your stint was shorter, feel free to be brief and just call out the most meaningful points of your role. Be concise, and be meaninful. The person reading just needs enough to want to talk to you more about your experience.
+  duration:  August 2017 &mdash; October 2020
+  summary: Full-stack, remote engineer who worked on Segment’s products targeting enterprise and self-serve customers. Primarily used React, GraphQL, Node.JS and Go micro-services to rewrite the RBAC Auth model, drove the launch of the Segment Functions Product, improved Object API data pipeline and UX, and kickstarted a new version of JS SDK.
 
-
-# Communications Coordinator
 - company: Librato
   position: Senior Software Engineer
-  # duration:   Jun, 2008  &mdash; May, 2010
-  # summary: Led communication efforts across digital and traditional media channels for marketing and public relations, internal communication strategies, and coordinated support programs for the recipients of the center's services.
+  duration: August 2015  &mdash; August 2017
+  summary: Full-stack, remote engineer that worked on Librato’s monitoring platform which handled over 3TB of data daily for hundreds of software teams. Built and scaled UIs and backend APIs along with various distributed systems written in Ruby on Rails, GraphQL, and Java 8.
+
+- company: BookShout
+  position: Senior Software Engineer
+  duration: August 2012  &mdash; August 2015
+  summary: Full-stack engineer that helped create functionality for initial version of BookShout, an ebook reading application. Optimized and scaled main APIs backed by Ruby on Rails, Scala, and MySQL
+
+- company: The Active Network
+  position: QA Engineer
+  duration: August 2008  &mdash; August 2012
+  summary: One of two QA engineers that focused building out automated testing using Selenium for one of Active's web-based SaaS products

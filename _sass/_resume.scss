@@ -6,6 +6,7 @@
 .section-header {
   @include section_border;
   margin-bottom: 1.5rem;
+  color: #7A6FF0;
 
   h2 {
     @include sans;
@@ -37,6 +38,7 @@
     letter-spacing: -.15rem;
     line-height: 1;
     margin: 1rem 0 0;
+    color: #7A6FF0;
   }
 
   .header-contact-info {

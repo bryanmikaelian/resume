@@ -56,11 +56,15 @@
           <h2>Experience</h2>
         </header>
 
-        {% for job in site.data.experience %}
+        {% assign companies = site.data.experience | group_by: "company" %}
+        {% for company in companies %}
         <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-          <h3 class="resume-item-title" itemprop="name">{{ job.company }}</h3>
+          <h3 class="resume-item-title" itemprop="name">{{ company.name }}</h3>
+          {% for job in company.items %}
           <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
           <p class="resume-item-copy">{{ job.summary }}</p>
+          <br />
+          {% endfor %}
         </div><!-- end of resume-item -->
         {% endfor %}
 
