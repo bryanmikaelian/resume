@@ -20,10 +20,14 @@ resume_contact_email:           "bryan.mikaelian@gmail.com"
 resume_contact_telephone:       "214-532-7112"
 resume_contact_address:         "10010 Prestwich Ter, Ijamsville, MD 21754"
 
-resume_header_contact_info:     "710010 Prestwich Ter, Ijamsville, MD 21754 • 214-532-7112 • bryan.mikaelian@gmail.com"
+resume_header_contact_info:     "10010 Prestwich Ter, Ijamsville, MD 21754 • 214-532-7112 • bryan.mikaelian@gmail.com"
 display_header_contact_info:    "false"
 
-resume_header_intro: "<p>This is the executive summary. You should write a few brief, concise, and meaningful sentences about yourself from a professional context, and your immediate career goals. Make the length appropriate for your needs, but keep it brief and concise</p>"
+resume_header_intro: "
+<p>
+  As Backend engineer with over a decade of experience, most of my expertise is around building APIs and scaling control plane services. In recent years, my focus has been working on platforms that deal heavily with streaming data. This includes products both in the Monitoring space and Analytics space. In recent years, I have been working on billing systems and dealing with the challenges of scaling these systems both on the finance side and streaming side for usage data. With this experience and my technical accumen for leading projects and owning systems end-to-end, I am eager to bring these skills to any team that needs more platform engineering.
+</p>
+"
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
