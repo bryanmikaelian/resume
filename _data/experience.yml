@@ -15,11 +15,10 @@
     </ul>
   "
 
-
 - company: Netlify &mdash; <small>San Francisco, CA (Remote)</small>
   position: Senior Backend Engineer, Billing
   duration: January 2022 &mdash; June 2022
-  summary: Responsible for exposing new platform, billing-centric APIs for the control plane and FE to consume. Core technologies used were Ruby on Rails, Redis, and MongoDB. Also helped improved and scale billing infrastructure as customer growth accelerated especially in the enterprise space
+  summary: Responsible for exposing new platform, billing-centric APIs for the control plane and FE to consume. Also helped improved and scale billing infrastructure as customer growth accelerated especially in the enterprise space.
 
 - company: Netlify &mdash; <small>San Francisco, CA (Remote)</small>
   position: Senior Backend Engineer, Growth
