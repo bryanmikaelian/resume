@@ -27,8 +27,8 @@
     "Founding member of the Growth Team that helped build a team capable of running sophisticated growth experiments in the product using data backends and APIs
   Key projects include:
     <ul>
-      <li>Implementation of a framework for collecting Segment data and streamlining how teams track user activity in Netlify</li>
-      <li>Foundational work for running growth experienments at Netlify using Segment Data and MongoDB</li>
+      <li>Implementation of a framework for collecting Segment data and streamlining how teams track user activity</li>
+      <li>Foundational work for running growth experienments using Segment Data, Snowflake DB, Mode Analytics, and MongoDB</li>
     </ul>
   "
 
