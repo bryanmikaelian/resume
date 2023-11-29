@@ -2,15 +2,16 @@
 - company: Netlify &mdash; <small>San Francisco, CA (Remote)</small>
   position: Staff Backend Engineer, Billing
   duration: June 2022 &mdash; Present
-  summary: "Currently a platform engineer charged with scaling Netlify's control plane and core APIs. Also the primary owner and lead engineer for all of Netlify's billing systems and usage data pipelines. Core technologies are Ruby and Golang services, Kafka, Clickhouse, and MongoDB. Also helping lead efforts to improve Netlify's monitoring and observability with Datadog by improving monitors, writing better runbooks and training other ICs on best practices for monitoring software in production.
+  summary: "Currently a platform engineer charged with scaling the control plane and core APIs. Also the primary owner and lead engineer for all billing systems and usage data pipelines. Core technologies are Ruby and Golang services, Kafka, Clickhouse, and MongoDB. Also helping lead efforts to improve monitoring and observability with Datadog by improving monitors, writing better runbooks and training other ICs on best practices for monitoring software in production.
   <br />
   <br />
   Key projects include:
     <ul>
-      <li>Migration from AWS Redshift to Clickhouse for all usage-based data with 0 downtime</li>
-      <li>Migration of all background jobs from a legacy version of redis with 0 dataloss</li>
+      <li>Migrating payment processing from Braintree to Stripe with zero customer impact</li>
+      <li>Migration from AWS Redshift to Clickhouse for all usage-based data with zero downtime</li>
+      <li>Migration of all background jobs from a legacy version of Redis with zero dataloss</li>
       <li>Project lead for removal of legacy billing system for Netlify's Build Minutes feature</li>
-      <li>Re-architecting Netlify's nightly billing jobs, reducing runtime from 8 hours to 3 minutes</li>
+      <li>Re-architecting nightly billing jobs, reducing runtime from eight hours to three minutes</li>
     </ul>
   "
 
