@@ -7,10 +7,10 @@
   <br />
   Key projects led include:
     <ul>
-      <li>Migrated payment processing from Braintree to Stripe with zero customer impact</li>
-      <li>Migrated from AWS Redshift to Clickhouse for all usage-based data with zero downtime</li>
-      <li>Migrated of all background jobs from a legacy version of Redis with zero dataloss</li>
-      <li>Removal of legacy billing system for Netlify's Build Minutes feature</li>
+      <li>Migration of payment processing from Braintree to Stripe with zero customer impact</li>
+      <li>Migration from AWS Redshift to Clickhouse for all usage-based data with zero downtime</li>
+      <li>Migration of all background jobs using a legacy version of Redis with zero dataloss</li>
+      <li>Removal of the legacy billing system for Netlify's Build Minutes feature</li>
       <li>Re-architecting nightly billing jobs, reducing runtime from eight hours to three minutes</li>
     </ul>
   "
