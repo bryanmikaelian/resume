@@ -1,8 +1,13 @@
 # Jobs
+- company: 1Password &mdash; <small>Toronto, ON (Remote)</small>
+  position: Sr Engineer, Billing Growth
+  duration: May 2024 &mdash; Present
+  summary: "Currently working on improving our billing experience and conversions to higher plans"
+  
 - company: Netlify &mdash; <small>San Francisco, CA (Remote)</small>
   position: Staff Backend Engineer, Billing
-  duration: June 2022 &mdash; Present
-  summary: "Currently a platform engineer charged with scaling the control plane and core APIs. Also the primary owner and lead engineer for all billing systems and usage data pipelines. Also helping lead efforts to improve monitoring and observability with Datadog by improving monitors, writing better runbooks and training other ICs on best practices for monitoring software in production. Core technologies are Ruby and Golang services, Kafka, Clickhouse, and MongoDB.
+  duration: June 2022 &mdash; May 2024
+  summary: "Staff platform engineer charged with scaling the control plane and core APIs. Also the primary owner and lead engineer for all billing systems and usage data pipelines. Also helping lead efforts to improve monitoring and observability with Datadog by improving monitors, writing better runbooks and training other ICs on best practices for monitoring software in production. Core technologies are Ruby and Golang services, Kafka, Clickhouse, and MongoDB.
   <br />
   <br />
   Key projects led include:
