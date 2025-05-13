@@ -1,0 +1,5 @@
+# Open Source
+- project: Venn
+  role: Creator & Lead Developer
+  url: https://github.com/vennbilling/venn
+  description: "Developing Venn, a modern, self-hosted billing platform written in Clojure. Designed the system architecture to handle complex billing scenarios based on extensive industry experience. Implementing with functional programming principles and best practices. Currently in active development."
