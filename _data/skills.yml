@@ -1,9 +1,5 @@
-# Skills
-# Organizational leadership
-# - skill: Organizational leadership
-#   description: I have several years of experience leading organziations from community groups to business departments. From public speaking, to mentoring, to coordination of people and events, I can lead in any context.
 - skill: Technical
-  description: Ruby on Rails, Golang, Relational Databases, NoSQL Databases, Docker, Distrubuted Systems, Clojure(Script) + Tooling, JavaScript, TypeScript, NodeJS ,  GraphQL, REST, gRPC, AWS, Observability, Kubernetes, Kafka, Clickhouse
+  description: Ruby on Rails, Golang, Distributed Systems, Kafka, ClickHouse, MongoDB, Observability, Clojure/ClojureScript, Polylith, Functional Programming, GraphQL, REST, gRPC, AWS, Docker, Kubernetes, JavaScript, TypeScript, NodeJS, Relational Databases, NoSQL Databases, CI/CD pipelines
 
 - skill: Interpersonal
-  description: Project Management, Technical Leadership, Mentoring, Technical Acumen, Managing Stakeholders, Results Driven, Ownership, Autonomous
+  description: Strategic Planning, Technical Leadership, Mentoring, Technical Acumen, Managing Stakeholders, Results-driven Delivery, System Ownership, Cross-team Collaboration, Autonomous Execution

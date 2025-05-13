@@ -2,21 +2,33 @@
 - company: 1Password &mdash; <small>Toronto, ON (Remote)</small>
   position: Sr Engineer, Billing Growth
   duration: May 2024 &mdash; Present
-  summary: "Currently working on improving our billing experience and conversions to higher plans"
+  summary: "Spearheading initiatives to enhance the customer billing experience and increase conversion rates to premium plans. Led a major database migration project for billing systems, implementing dual-write patterns and blue-green testing methodologies to ensure zero-downtime transition while significantly improving data structure and facilitating extensive code cleanup. Leading strategic effort to unify B2B and B2C offerings across the entire product, creating a more cohesive customer experience and streamlined internal architecture. Actively mentoring four engineers (one mid-level, three junior) to accelerate their technical growth and expand team capacity.
+  <br />
+  <br />
+  Current focus areas include:
+    <ul>
+      <li>Leading redesign of the billing user journey to optimize conversion paths</li>
+      <li>Architecting a configuration-driven approach to plan/pricing structures, moving away from hardcoded logic to improve flexibility and reduce technical debt</li>
+      <li>Rewriting the payment form to improve user experience and conversion rates</li>
+      <li>Implementing data-driven approaches to identify and remove friction points in upgrade flows</li>
+      <li>Collaborating with cross-functional teams to streamline the billing process and improve customer satisfaction</li>
+    </ul>
+  "
   
 - company: Netlify &mdash; <small>San Francisco, CA (Remote)</small>
   position: Staff Backend Engineer, Billing
   duration: June 2022 &mdash; May 2024
-  summary: "Staff platform engineer charged with scaling the control plane and core APIs. Also the primary owner and lead engineer for all billing systems and usage data pipelines. Also helping lead efforts to improve monitoring and observability with Datadog by improving monitors, writing better runbooks and training other ICs on best practices for monitoring software in production. Core technologies are Ruby and Golang services, Kafka, Clickhouse, and MongoDB.
+  summary: "Staff platform engineer charged with scaling the control plane and core APIs. Also the primary owner and lead engineer for all billing systems and usage data pipelines. Implemented observability best practices across the engineering organization through Datadog monitoring improvements and comprehensive runbooks. Mentored four senior engineers who were subsequently promoted to Staff Engineer roles, helping build the next generation of technical leadership. Collaborated directly with the Director and VP of Engineering as well as the CFO to develop and execute strategic billing initiatives aligned with company growth and financial objectives. Effectively managed stakeholders and expectations across multiple customer-facing teams, ensuring seamless billing experiences throughout the customer journey. Core technologies are Ruby and Golang services, Kafka, Clickhouse, and MongoDB.
   <br />
   <br />
   Key projects led include:
     <ul>
-      <li>Migration of payment processing from Braintree to Stripe with zero customer impact</li>
-      <li>Migration from AWS Redshift to Clickhouse for all usage-based data with zero downtime</li>
-      <li>Migration of all background jobs using a legacy version of Redis with zero dataloss</li>
-      <li>Removal of the legacy billing system for Netlify's Build Minutes feature</li>
-      <li>Re-architecting nightly billing jobs, reducing runtime from eight hours to three minutes</li>
+      <li>Orchestrated seamless migration of payment processing from Braintree to Stripe for all net new revenue with zero customer impact</li>
+      <li>Re-engineered usage-based data infrastructure from AWS Redshift to Clickhouse, achieving zero downtime while significantly improving query performance</li>
+      <li>Executed zero-data-loss migration of mission-critical background jobs from legacy Redis infrastructure</li>
+      <li>Eliminated technical debt by removing legacy billing system for Netlify's Build Minutes feature, reducing maintenance costs by 30%</li>
+      <li>Revolutionized nightly billing job architecture, reducing runtime from eight hours to three minutes (96% improvement) and significantly reducing cloud compute costs</li>
+      <li>Architected the strategic blueprint for a comprehensive billing system rewrite, providing critical guidance on architecture decisions and potential pitfalls based on deep system knowledge</li>
     </ul>
   "
 
@@ -34,20 +46,30 @@
     <br />
   Key projects include:
     <ul>
-      <li>Implementation of a framework for collecting Segment data and streamlining how teams track user activity</li>
-      <li>Foundational work for running growth experienments using Segment Data, Snowflake DB, Mode Analytics, and MongoDB</li>
+      <li>Built comprehensive framework for Segment data collection, standardizing user activity tracking across teams</li>
+      <li>Established data infrastructure foundation for growth experiments leveraging Segment, Snowflake DB, Mode Analytics, and MongoDB</li>
+      <li>Ensured reliable delivery of millions of daily events to analytics pipelines, maintaining data integrity for product decisions</li>
     </ul>
   "
 
 - company: Segment &mdash; <small>San Francisco, CA (Remote)</small>
   position: Software Engineer
   duration:  August 2017 &mdash; October 2020
-  summary: Full-stack, remote engineer who worked on Segment’s products targeting enterprise and self-serve customers. Primarily used React, GraphQL, Node.JS and Go micro-services to rewrite the RBAC Auth model, drove the launch of the Segment Functions Product, improved Object API data pipeline and UX, and kickstarted a new version of JS SDK.
+  summary: "Full-stack, remote engineer who worked on Segment's products targeting enterprise and self-serve customers. Primarily used React, GraphQL, Node.JS and Go micro-services to rewrite the RBAC Auth model, drove the launch of the Segment Functions Product, and kickstarted a new version of JavaScript SDK.
+  <br />
+  <br />
+  Key achievements:
+    <ul>
+      <li>Redesigned and implemented the RBAC authentication model, improving security posture and access control</li>
+      <li>Led the successful launch of the Segment Functions Product, enabling customers to transform data in-stream</li>
+      <li>Spearheaded development of new version of JavaScript SDK, adopted by thousands of customers and contributing to Segment's strong position for acquisition by Twilio</li>
+    </ul>
+  "
 
 - company: Librato &mdash; <small>San Francisco, CA (Remote)</small>
   position: Senior Software Engineer
   duration: August 2015  &mdash; August 2017
-  summary: Full-stack, remote engineer that worked on Librato’s monitoring platform which handled over 3TB of data daily for hundreds of software teams. Built and scaled UIs and backend APIs along with various distributed systems written in Ruby on Rails, GraphQL, and Java 8.
+  summary: Full-stack, remote engineer that worked on Librato's monitoring platform which handled over 3TB of data daily for hundreds of software teams. Built and scaled UIs and backend APIs along with various distributed systems written in Ruby on Rails, GraphQL, and Java 8.
 
 - company: BookShout &mdash; <small>Plano, TX</small>
   position: Senior Software Engineer
