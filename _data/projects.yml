@@ -5,4 +5,4 @@
   role: Creator & Lead Developer
   duration: 2023 &mdash; Present
   url: "https://github.com/vennbilling/venn"
-  description: Venn is an open source, modern, self-hosted billing platform written in Clojure. Designed to handle complex billing scenarios based on extensive industry experience and implemented with functional programming principles and best practices. Currently in active development.
+  description: Venn is an open source, modern, self-hosted billing platform written in Clojure. Designed to handle complex billing scenarios that are driven a common event specification that engineers can consume. Currently in active development.
