@@ -26,7 +26,7 @@
       <li>Orchestrated seamless migration of payment processing from Braintree to Stripe for all net new revenue with zero customer impact</li>
       <li>Re-engineered usage-based data infrastructure from AWS Redshift to Clickhouse, achieving zero downtime while significantly improving query performance</li>
       <li>Executed zero-data-loss migration of mission-critical background jobs from legacy Redis infrastructure</li>
-      <li>Eliminated technical debt by removing legacy billing system for Netlify's Build Minutes feature, reducing maintenance costs by 30%</li>
+      <li>Eliminated technical debt by removing legacy billing system for Netlify's Build Minutes feature</li>
       <li>Revolutionized nightly billing job architecture, reducing runtime from eight hours to three minutes (96% improvement) and significantly reducing cloud compute costs</li>
       <li>Architected the strategic blueprint for a comprehensive billing system rewrite, providing critical guidance on architecture decisions and potential pitfalls based on deep system knowledge</li>
     </ul>
