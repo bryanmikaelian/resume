@@ -5,4 +5,10 @@
   role: Creator & Lead Developer
   duration: 2023 &mdash; Present
   url: "https://github.com/vennbilling/venn"
-  description: Venn is an open source, modern, self-hosted billing platform written in Clojure. Designed to handle complex billing scenarios that are driven a common event specification that engineers can consume. Currently in active development.
+  description: Venn is an open source, modern, self-hosted billing platform written in Clojure. Designed to handle complex billing scenarios that are driven a common event specification that engineers can consume. Currently in semi-active development.
+
+- project: Scrollwork
+  role: Creator & Lead Developer
+  duration: 2025 &mdash; Present
+  url: "https://github.com/vennbilling/scrollwork"
+  description: Scrollwork is a sidecar agent that allows teams to asses the cost risk of an AI prompt. Currently in active development.
