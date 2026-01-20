@@ -7,16 +7,14 @@
 - company: 1Password &mdash; <small>Toronto, ON (Remote)</small>
   position: Sr Engineer, Billing Growth
   duration: May 2024 &mdash; Sept 2025
-  summary: "Spearheading initiatives to enhance the customer billing experience and increase conversion rates to premium plans. Helped lead a major database migration project for billing systems, implementing dual-write patterns and blue-green testing methodologies to ensure zero-downtime transition while significantly improving data structure and facilitating extensive code cleanup. Leading strategic effort to unify B2B and B2C offerings across the entire product, creating a more cohesive customer experience and streamlined internal architecture. Actively mentoring two engineers (one mid-level, one junior) to accelerate their technical growth and expand team capacity.
+  summary: Spearheaded initiatives to enhance the customer billing experience and increase conversion rates to premium plans. Helped lead a major database migration project for billing systems, implementing dual-write patterns and blue-green testing methodologies to ensure zero-downtime transition while significantly improving data structure and facilitating extensive code cleanup. Led strategic effort to unify B2B and B2C offerings across the entire product, creating a more cohesive customer experience and streamlined internal architecture. Actively mentored two engineers (one mid-level, one junior) to accelerate their technical growth and expand team capacity.
   <br />
   <br />
   Current focus areas include:
     <ul>
-      <li>Leading redesign of the billing user journey to optimize conversion paths</li>
-      <li>Architecting a configuration-driven approach to plan/pricing structures, moving away from hardcoded logic to improve flexibility and reduce technical debt</li>
-      <li>Rewriting the payment form to improve user experience and conversion rates</li>
-      <li>Implementing data-driven approaches to identify and remove friction points in upgrade flows</li>
-      <li>Collaborating with cross-functional teams to streamline the billing process and improve customer satisfaction</li>
+      <li>Led redesign of the billing user journey to optimize conversion paths</li>
+      <li>Architected a configuration-driven approach to plan/pricing structures, moving away from hardcoded logic to improve flexibility and reduce technical debt</li>
+      <li>Rewrote the payment form to improve user experience and conversion rates</li>
     </ul>
   "
   
