@@ -2,12 +2,12 @@
 - company: Aptible &mdash; <small>San Francisco, CA (Remote)</small>
   position: Senior Software Engineer II
   duration: Sept 2025 &mdash; Present
-  summary: "Starting soon. More details to come!"
+  summary: "Platform backend engineer focused on infrastructure and data systems. Launched point-in-time recovery for Postgres solution, enabling customers to restore databases to any specific moment. Spearheading data warehouse cleanup initiative to address inefficiencies in current ETL processes."
 
 - company: 1Password &mdash; <small>Toronto, ON (Remote)</small>
   position: Sr Engineer, Billing Growth
   duration: May 2024 &mdash; Sept 2025
-  summary: Spearheaded initiatives to enhance the customer billing experience and increase conversion rates to premium plans. Helped lead a major database migration project for billing systems, implementing dual-write patterns and blue-green testing methodologies to ensure zero-downtime transition while significantly improving data structure and facilitating extensive code cleanup. Led strategic effort to unify B2B and B2C offerings across the entire product, creating a more cohesive customer experience and streamlined internal architecture. Actively mentored two engineers (one mid-level, one junior) to accelerate their technical growth and expand team capacity.
+  summary: "Spearheaded initiatives to enhance the customer billing experience and increase conversion rates to premium plans. Helped lead a major database migration project for billing systems, implementing dual-write patterns and blue-green testing methodologies to ensure zero-downtime transition while significantly improving data structure and facilitating extensive code cleanup. Led strategic effort to unify B2B and B2C offerings across the entire product, creating a more cohesive customer experience and streamlined internal architecture. Actively mentored two engineers (one mid-level, one junior) to accelerate their technical growth and expand team capacity.
   <br />
   <br />
   Current focus areas include:
