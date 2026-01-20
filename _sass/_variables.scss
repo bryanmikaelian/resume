@@ -1,22 +1,21 @@
-// Variables
+// Variables - Man Page Theme
 // ---------------------------------------/
 
 $container-width: 1024px !default;
 $grid-gutter:     10px !default;
 
-// Colors
+// Colors - Strict black and white
 $white:             #fff;
-$black:             #333;
-$blue:              #3498DB;
+$black:             #000;
+$gray:              #666;
 
 // Styles
 $text_color:        $black;
+$bg_color:          $white;
 
-// Font stack
-$body-font: Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol" !default;
+// Font stack - Monospace only
+$body-font: "Courier New", Courier, "Liberation Mono", monospace !default;
+$mono-font: "Courier New", Courier, "Liberation Mono", monospace !default;
 
 // The base body size
-$body-font-size: 13px !default;
-
-// Monospace font stack
-$mono-font: Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
+$body-font-size: 14px !default;

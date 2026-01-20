@@ -1,4 +1,4 @@
-// Base styles
+// Base styles - Man Page Theme
 // ---------------------------------------/
 * {
   -webkit-box-sizing: border-box;
@@ -10,11 +10,12 @@ html {
   background: $white;
 }
 
-body{
-  @include serif;
+body {
+  @include mono;
   color: $text_color;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
+  background: $white;
 }
 
 .wrapper:before,
@@ -27,20 +28,29 @@ body{
   zoom: 1;
 }
 
-// clearfix (now called group,
-// via http://css-tricks.com/snippets/css/clear-fix/)
+// clearfix
 .group:before,
 .group:after { content:""; display:table; }
 .group:after { clear:both; }
-.group { zoom:1; /* For IE 6/7 (trigger hasLayout) */ }
+.group { zoom:1; }
 
 ::-moz-selection {
-    background: rgba(51,51,51,.8);
-    color: #fff;
+    background: $black;
+    color: $white;
     text-shadow: none;
 }
 ::selection {
-    background: rgba(51,51,51,.8);
-    color: #fff;
+    background: $black;
+    color: $white;
     text-shadow: none;
+}
+
+a {
+  color: $black;
+  text-decoration: underline;
+  
+  &:hover {
+    background: $black;
+    color: $white;
+  }
 }

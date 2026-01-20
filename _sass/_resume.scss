@@ -1,68 +1,63 @@
-// Resume styles
+// Resume styles - Man Page Theme
 // ---------------------------------------/
 
 // util
-
 .section-header {
   @include section_border;
   margin-bottom: 1.5rem;
-  color: $blue;
 
   h2 {
-    @include sans;
-    font-weight: 900;
-    font-size: 1.75rem;
-    letter-spacing: -.05rem;
+    @include mono_bold;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
     margin: 0;
+    text-transform: uppercase;
   }
 }
 
 // page header styles
-
-.page-header { padding: 1.5rem 0;
+.page-header { 
+  padding: 1.5rem 0;
+  border-bottom: 2px solid $black;
 
   .avatar {
-    width: 95px;
-    max-width: 100%;
-    overflow: hidden;
-    @include border-radius(100px);
-    margin: 0 auto;
-    display: block;
+    display: none; // Hide avatar for man page aesthetic
   }
 
   .header-name {
-    @include sans;
-    font-size: 3rem;
-    font-weight: 900;
-    text-align: center;
-    letter-spacing: -.15rem;
-    line-height: 1;
-    margin: 1rem 0 0;
-    color: $blue;
+    @include mono_bold;
+    font-size: 2rem;
+    text-align: left;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
   }
 
   .header-contact-info {
-    @include sans;
-    text-align: center;
+    @include mono_regular;
+    text-align: left;
+    font-size: 0.9rem;
   }
+  
   .header-contact-info p a {
     color: inherit;
   }
 
   .title-bar {
-    @include section_border;
-    margin-top: 2rem;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    margin-top: 1rem;
     padding: .4rem 0;
     @include clearfix;
 
     .header-title {
-      @include sans;
-      font-weight: 300;
-      font-size: 1.75rem;
-      line-height: 2rem;
-      letter-spacing: -.05rem;
-      text-align: center;
-      margin: 0 0 .5rem;
+      @include mono_regular;
+      font-size: 1.1rem;
+      line-height: 1.5rem;
+      text-align: left;
+      margin: 0;
+      text-transform: uppercase;
 
       @include media_larger_than_mobile {
         float: left;
@@ -72,7 +67,13 @@
   }
 
   .executive-summary {
-    @include media_larger_than_mobile { font-size: 1rem; }
+    @include mono_regular;
+    margin-top: 1rem;
+    text-align: justify;
+    
+    @include media_larger_than_mobile { 
+      font-size: 0.95rem; 
+    }
   }
 }
 
@@ -80,10 +81,8 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  position: relative;
-  top: 4px;
-  text-align: center;
-  border-top: 2px solid #c7c7c7;
+  text-align: left;
+  border-top: 1px solid $black;
   padding-top: .4rem;
 
   @include media_larger_than_mobile {
@@ -94,66 +93,82 @@
 
   .icon-link-item {
     display: inline-block;
-    margin-left: 5px;
+    margin-right: 10px;
+    
+    &:before {
+      content: "[";
+    }
+    
+    &:after {
+      content: "]";
+    }
   }
 
-  .icon-link { display: inline-block;
-
-    &:hover .icon path {
-      fill: #333;
-      @include transition(all .2s ease);
+  .icon-link {
+    display: inline-block;
+    text-decoration: none;
+    
+    &:hover {
+      background: $black;
+      color: $white;
     }
   }
 
   .icon {
-    height: 28px;
+    display: none; // Hide SVG icons, use text links
   }
 }
 
 .contact-button {
-  @include border-radius(3px);
-  background-color: #efefef;
+  background-color: $white;
+  border: 2px solid $black;
   text-decoration: none;
   text-align: center;
   display: block;
-  margin: 1.5rem auto;
+  margin: 1.5rem 0;
   width: 220px;
-  font-size: 1.375rem;
-  @include sans_light;
-  color: #333;
-  line-height: 55px;
-  @include transition(all .2s ease);
+  font-size: 1rem;
+  @include mono_regular;
+  color: $black;
+  line-height: 40px;
+  text-transform: uppercase;
 
   &:hover {
-    background-color: #333;
-    color: #fff;
+    background-color: $black;
+    color: $white;
   }
 
-  &.not-looking { width: 400px; }
+  &.not-looking { 
+    width: 400px; 
+  }
 }
 
 // resume content styles
-
 .content-section {
-  margin: 0 0 3rem;
+  margin: 0 0 2rem;
+  page-break-inside: avoid;
 
-  .resume-item { margin-bottom: 2rem; }
+  .resume-item { 
+    margin-bottom: 1.5rem;
+    page-break-inside: avoid;
+  }
 
   .resume-item-title {
-    @include sans_bold;
-    margin: 0 0 .75rem;
-    font-size: 1.5rem;
-    letter-spacing: -.05rem;
-    line-height: 1;
+    @include mono_bold;
+    margin: 0 0 .5rem;
+    font-size: 1.1rem;
+    line-height: 1.3;
   }
 
   .resume-item-details {
-    font-size: 1.125rem;
-    margin: 0 0 .75rem;
-    line-height: 1;
+    @include mono_bold;
+    font-size: 0.95rem;
+    margin: 0 0 .5rem;
+    line-height: 1.3;
+    font-style: normal;
 
     &.award-title {
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
   }
 
@@ -162,36 +177,46 @@
   .resume-item-copy,
   .resume-item-list {
     a {
-      color: #333;
-      text-decoration: none;
-      border-bottom: 1px solid;
+      color: $black;
+      text-decoration: underline;
 
       &:hover {
-        border-bottom: none;
-        color: #9c9c9c;
+        background: $black;
+        color: $white;
       }
     }
   }
 
-  .resume-item-copy { margin: .75rem 0 0; }
+  .resume-item-copy { 
+    margin: .5rem 0 0;
+    text-align: justify;
+  }
+  
+  ul {
+    margin: 0.5rem 0;
+    padding-left: 2rem;
+    
+    li {
+      margin-bottom: 0.3rem;
+    }
+  }
 }
 
 // footer styles
-
 .page-footer {
-  border-top: 4px solid #c7c7c7;
+  border-top: 2px solid $black;
   padding-top: 1.5rem;
   text-align: center;
   margin-bottom: 3rem;
 
   .footer-line {
+    @include mono_regular;
     margin: 0;
     font-size: .875rem;
-    color: #999;
 
     > a {
       font-weight: 700;
-      color: #333;
+      color: $black;
     }
   }
 }
@@ -201,36 +226,55 @@
 @media print {
   .no-print { display: none !important }
   .print-only { display: block !important }
-  body { font-size: 12px; line-height: 1rem; }
-  .page-header { padding: 1rem 0 .2rem;
+  
+  body { 
+    font-size: 11px; 
+    line-height: 1.4;
+  }
+  
+  .page-header { 
+    padding: 1rem 0 .2rem;
+    
     .header-name {
-      @include sans_bold;
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin: 0 0 .2rem;
     }
   }
+  
   .section-header {
     @include section_border_thin;
     margin-bottom: 1rem;
-    h2 { font-size: 1.2rem; line-height: 1.5rem; }
+    
+    h2 { 
+      font-size: 1rem; 
+      line-height: 1.3rem; 
+    }
   }
+  
   .content-section {
     margin: 0 0 1rem;
-    .resume-item { margin-bottom: 1rem; }
+    
+    .resume-item { 
+      margin-bottom: 0.8rem; 
+    }
+    
     .resume-item-title {
-      font-size: 16px;
-      line-height: .7em;
+      font-size: 0.95rem;
+      line-height: 1.2;
     }
 
     .resume-item-details {
-      font-size: 12px;
-      margin: 0 0 .75rem;
-      line-height: .7em;
-      font-style:italic;
+      font-size: 0.85rem;
+      margin: 0 0 .4rem;
+      line-height: 1.2;
 
       &.award-title {
-        font-size: 11px;
+        font-size: 0.8rem;
       }
     }
+  }
+  
+  a {
+    text-decoration: none;
   }
 }
