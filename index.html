@@ -1,3 +1,1707 @@
+welp, this time is here. can you help me update this stuff?
+3:20 PM
+
+I'd be happy to help you update your resume! Let me take a look at what you have and understand what needs updating.
+
+Looking at your documents, I can see this is a Jekyll-based resume site. To give you the best help, I need to understand what changes you'd like to make:
+
+    Are you updating your current role at Aptible? I see it says "Starting soon. More details to come!" - do you now have accomplishments to add there?
+    Do you need to add a new position or update existing ones?
+    Are there changes to your:
+        Skills?
+        Projects (Venn or Scrollwork)?
+        Contact information?
+        Summary/intro?
+    Do you want to adjust the formatting or structure of anything?
+
+Let me know what specific updates you need, and I'll help you make the changes to the appropriate files!
+
+I want to restyle first. can we just go black and white and make it monospaced font. kind of like a man page
+3:21 PM
+
+plaintext
+Path not found: /mnt/user-data/uploads/_sass
+
+Let me check the correct path:
+
+bash
+find /mnt/user-data/uploads -name "_sass" -type d
+
+Output
+exit code 0
+
+bash
+ls -la /mnt/user-data/uploads/
+
+Output
+total 4
+dr-xr-xr-x 1  999 root    0 Jan 20 20:21 .
+drwxr-xr-x 5 root root 4096 Jan 20 20:21 ..
+
+I see - the files are in your context but not in the uploads directory. Let me work directly with creating the updated styles. I'll create a man page-inspired black and white monospaced theme for your resume.
+
+Now let me copy the layout file (which should remain the same) and create an updated head file that removes the Google Fonts:
+
+Now let me copy over the normalize and layout files (these can stay the same):
+
+bash
+cat > /home/claude/_sass/_normalize.scss << 'EOF'
+// Normalize styles
+// ---------------------------------------/
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  box-sizing: content-box; /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+EOF
+
+Output
+exit code 0
+
+bash
+cat > /home/claude/_sass/_layout.scss << 'EOF'
+// Layout styles
+// ---------------------------------------/
+
+// Layout from Primer (https://github.com/primer/primer/blob/master/scss/_layout.scss)
+
+// Fixed-width, centered column for site content.
+.container {
+  width: $container-width;
+  margin-right: auto;
+  margin-left: auto;
+  @include clearfix;
+}
+
+// Grid system
+//
+// Create rows with `.columns` to clear the floated columns and outdent the
+// padding on `.column`s with negative margin for alignment.
+
+.columns {
+  margin-right: -$grid-gutter;
+  margin-left: -$grid-gutter;
+  @include clearfix;
+}
+
+// Base class for every column (requires a column width from below)
+.column {
+  float: left;
+  padding-right: $grid-gutter;
+  padding-left: $grid-gutter;
+}
+
+// Column widths
+.one-third {
+  width: 33.333333%;
+}
+
+.two-thirds {
+  width: 66.666667%;
+}
+
+.one-fourth {
+  width: 25%;
+}
+
+.one-half {
+  width: 50%;
+}
+
+.three-fourths {
+  width: 75%;
+}
+
+.one-fifth {
+  width: 20%;
+}
+
+.four-fifths {
+  width: 80%;
+}
+
+// Single column hack
+.single-column {
+  padding-right: $grid-gutter;
+  padding-left: $grid-gutter;
+}
+
+// Equal width columns via table sorcery.
+.table-column {
+  display: table-cell;
+  width: 1%;
+  padding-right: $grid-gutter;
+  padding-left: $grid-gutter;
+  vertical-align: top;
+}
+EOF
+
+Output
+exit code 0
+
+Now let me create the main CSS file:
+
+Now I also need to update the icon-links.html to show text instead of icons:
+
+Perfect! Now let me move all these files to the outputs directory so you can use them:
+
+bash
+
+mkdir -p /mnt/user-data/outputs/_sass
+mkdir -p /mnt/user-data/outputs/_includes
+mkdir -p /mnt/user-data/outputs/css
+
+# Copy SASS files
+cp /home/claude/_sass/_variables.scss /mnt/user-data/outputs/_sass/
+cp /home/claude/_sass/_mixins.scss /mnt/user-data/outputs/_sass/
+cp /home/claude/_sass/_base.scss /mnt/user-data/outputs/_sass/
+cp /home/claude/_sass/_resume.scss /mnt/user-data/outputs/_sass/
+cp /home/claude/_sass/_normalize.scss /mnt/user-data/outputs/_sass/
+cp /home/claude/_sass/_layout.scss /mnt/user-data/outputs/_sass/
+
+# Copy includes
+cp /home/claude/_includes/head.html /mnt/user-data/outputs/_includes/
+cp /home/claude/_includes/icon-links.html /mnt/user-data/outputs/_includes/
+
+# Copy CSS
+cp /home/claude/css/main.scss /mnt/user-data/outputs/css/
+
+echo "Files copied successfully!"
+ls -la /mnt/user-data/outputs/
+
+Output
+Files copied successfully!
+total 4
+drwxr-xr-x 1  999 root    0 Jan 20 20:23 .
+drwxr-xr-x 5 root root 4096 Jan 20 20:21 ..
+drwxr-xr-x 1  999 root    0 Jan 20 20:23 _includes
+drwxr-xr-x 1  999 root    0 Jan 20 20:23 _sass
+drwxr-xr-x 1  999 root    0 Jan 20 20:23 css
+
+Perfect! I've restyled your resume with a black and white, monospaced man page aesthetic. Here's what I've done:
+Key Changes:
+
+Typography:
+
+    Entire site now uses monospace fonts (Courier New/Liberation Mono)
+    All text is either regular or bold weight - no fancy styling
+
+Color Scheme:
+
+    Pure black text on white background
+    No grays, no blues - just stark black and white
+    Inverted colors on hover (black background, white text)
+
+Visual Style:
+
+    Simple single-pixel black borders instead of thick gray ones
+    Text links with brackets [like this] instead of icon graphics
+    Uppercase section headers for that technical documentation feel
+    Removed the avatar image for a cleaner look
+    Left-aligned headers (more man page-like than centered)
+
+What to do: Replace your existing files with these new ones:
+
+    Copy the entire _sass/ folder contents
+    Copy the _includes/ folder contents
+    Copy the css/ folder contents
+
+The layout and structure remain the same, so your existing content in _data/ and _config.yml will work perfectly with this new theme!
+
+Want me to make any adjustments to the styling?
+variables
+Code · SCSS 
+mixins
+Code · SCSS 
+base
+Code · SCSS 
+resume
+Code · SCSS 
+normalize
+Code · SCSS 
+layout
+Code · SCSS 
+Head
+Code · HTML 
+Icon links
+Code · HTML 
+Main
+Code · SCSS 
+
+checking how it looks
+3:24 PM
+
+Great! Take your time checking it out. Let me know if you want me to adjust anything - we can tweak:
+
+    Font sizes
+    Spacing/padding
+    Border styles (make them heavier, lighter, or different patterns)
+    Text alignment
+    The bracket style around links
+    How sections are separated
+    Print styles
+    Anything else that catches your eye!
+
+Just let me know what you think once you see it rendered.
+
+oh, there isn't a preview anywhere is there?
+3:24 PM
+
+You're right - there's no preview here. You'll need to run Jekyll locally to see it. Want me to create a quick README with instructions on how to preview it?
+
+Or if you'd like, I could create a simple HTML file with the compiled CSS so you can at least get a sense of how it looks before running the full Jekyll build?
+
+yea thats fine. even if everything is static.
+3:24 PM
+
+bash
+cp /home/claude/preview.html /mnt/user-data/outputs/preview.html
+
+Output
+exit code 0
+
+Perfect! I've created a static HTML preview that you can open in your browser. It has all the CSS inline so it's completely self-contained. This gives you a good sense of the man page aesthetic:
+
+    Monospace font throughout (Courier New)
+    Black text on white background
+    Simple black borders (1-2px solid lines)
+    Bracketed links like [GitHub] [Twitter] etc.
+    Uppercase headers for that technical doc feel
+    Left-aligned layout (more terminal-like)
+
+Download the preview.html file and open it in any browser to see how it looks!
+Preview
+Code · HTML 
+
+that looks good. under skills, can you bold each section?
+3:35 PM
+
+bash
+
+# Update the outputs
+cp /home/claude/_sass/_resume.scss /mnt/user-data/outputs/_sass/_resume.scss
+cp /home/claude/preview.html /mnt/user-data/outputs/preview.html
+echo "Files updated!"
+
+Output
+Files updated!
+
+Done! I've updated both the SCSS file and the preview HTML. Now "Technical" and "Interpersonal" (and any other skill section headers) will be bold. The updated files are ready for download.
+Preview
+Code · HTML 
+resume
+Code · SCSS 
+
+OK, what do I need to put in my jekyll repo?
+3:35 PM
+
+You need to replace these files in your Jekyll repo:
+
+Replace these files:
+
+    _sass/_variables.scss
+    _sass/_mixins.scss
+    _sass/_base.scss
+    _sass/_resume.scss
+    _sass/_normalize.scss
+    _sass/_layout.scss
+    _includes/head.html
+    _includes/icon-links.html
+    css/main.scss
+
+Keep everything else as-is:
+
+    _config.yml
+    _data/ folder (all your content files)
+    _layouts/ folder
+    index.html
+    All the other _includes/ files you're not replacing
+    Gemfile, .ruby-version, etc.
+
+So basically, download all the files I created from the outputs folder and drop them into your Jekyll repo, replacing the old versions. Your content and structure stay the same - just the styling changes!
+
+Then run:
+bash
+
+bundle exec jekyll serve
+
+And you should see your resume with the new man page theme at http://localhost:4000
+
+can you give me a command to do this from the terminal?
+3:36 PM
+
+bash
+chmod +x /home/claude/update-theme.sh && cp /home/claude/update-theme.sh /mnt/user-data/outputs/update-theme.sh
+
+Output
+exit code 0
+
+Perfect! I've created a shell script for you. Here's what to do:
+
+    Download all the files from the outputs folder to a local directory (let's say ~/Downloads/resume-theme/)
+    Navigate to that directory:
+
+bash
+
+   cd ~/Downloads/resume-theme/
+
+    Run the update script:
+
+bash
+
+   chmod +x update-theme.sh
+   ./update-theme.sh /path/to/your/jekyll/repo
+
+For example:
+bash
+
+   ./update-theme.sh ~/projects/my-resume
+
+The script will:
+
+    Check that the path is valid
+    Check that it's actually a Jekyll site
+    Copy all the theme files to the right locations
+    Tell you what to do next
+
+Then just:
+bash
+
+cd /path/to/your/jekyll/repo
+bundle exec jekyll serve
+
+And you're good to go!
+Update theme
+SH 
+
+oops, i removed the project lkink
+3:38 PM
+
+No problem! Do you want me to add the Projects section back? I can update the preview HTML and also let you know which file in your Jekyll repo contains that data (it should be in _data/projects.yml or similar).
+
+What would you like - just add it back to the preview, or do you need help with the actual data file too?
+
+no in this dchat, sorry
+3:39 PM
+
+Oh! You mean you accidentally removed the Scrollwork project link from our conversation earlier? No worries - I still have it. It's:
+
+Scrollwork: https://github.com/vennbilling/scrollwork
+
+Did you need me to do something with it, or were you just making sure I still had it?
+
+alright now the not so fun part: copy. update 1password to be past tense
+3:44 PM
+
+bash
+cp /home/claude/preview.html /mnt/user-data/outputs/preview.html
+
+Output
+exit code 0
+
+Done! I've updated the 1Password section to past tense:
+
+    "Spearheading" → "Spearheaded"
+    "Leading" → "Led"
+    "Actively mentoring" → "Actively mentored"
+    "Current focus areas include:" → "Key focus areas included:"
+    "Leading redesign" → "Led redesign"
+    "Architecting" → "Architected"
+    "Rewriting" → "Rewrote"
+    "Implementing" → "Implemented"
+    "Collaborating" → "Collaborated"
+
+The preview HTML is updated. You'll need to update the actual content in your Jekyll repo's _data/experience.yml file with these same changes when you're ready.
+Preview
+Code · HTML 
+
+Key focus areas more like key projects. ditch last two bullet points too
+3:45 PM
+
+bash
+cp /home/claude/preview.html /mnt/user-data/outputs/preview.html
+
+Output
+exit code 0
+
+Done! Changed "Key focus areas included:" to "Key projects led include:" and removed the last two bullet points about data-driven approaches and cross-functional collaboration.
+Preview
+Code · HTML 
+
+Can you show me what experience.yml would look like now?
+3:47 PM
+
+bash
+cp /home/claude/experience.yml /mnt/user-data/outputs/experience.yml
+
+Output
+exit code 0
+
+There you go! That's what your experience.yml file should look like with all the updates we made:
+
+    Aptible listed as current role
+    1Password updated to past tense
+    "Key projects led include:" instead of "Current focus areas"
+    Last two bullet points removed from 1Password
+    All the HTML formatting is inline in the YAML (the <br><br> and <ul> tags)
+
+This file goes in _data/experience.yml in your Jekyll repo.
+Experience
+YML 
+
+can we update the purpose (i think thats the first line) to callout expertise on billing systems
+3:50 PM
+
+Let me draft a few options that highlight billing systems expertise more prominently:
+
+Option 1 (Billing-first):
+
+Backend engineer with over 15 years of experience specializing in billing systems and usage-based infrastructure. Deep expertise in architecting high-scale API services and control planes that process streaming data for monitoring and analytics platforms, handling multiple terabytes of data daily. Demonstrated success in transforming payment processing systems, optimizing usage data pipelines, and reducing processing times by up to 96%. Seeking a role with a small, agile team where I can leverage my technical acumen to make immediate impact, with the autonomy to drive decisions and own complex systems end-to-end.
+
+Option 2 (More emphasis on billing):
+
+Backend engineer with over 15 years of experience specializing in billing systems, usage-based infrastructure, and high-scale API development. Expert in architecting payment processing systems, usage data pipelines, and control plane services that handle multiple terabytes of data daily. Proven track record transforming billing architectures and optimizing data pipelines, achieving up to 96% improvement in processing times. Seeking a role with a small, agile team where I can leverage my technical acumen to make immediate impact, with the autonomy to drive decisions and own complex systems end-to-end.
+
+Option 3 (Balanced):
+
+Backend engineer with over 15 years of experience specializing in billing systems and high-scale API development. Deep expertise in architecting usage-based infrastructure, payment processing systems, and control plane services that process streaming data for monitoring and analytics platforms, handling multiple terabytes of data daily. Demonstrated success in transforming billing systems and optimizing usage data pipelines, reducing processing times by up to 96%. Seeking a role with a small, agile team where I can leverage my technical acumen to make immediate impact, with the autonomy to drive decisions and own complex systems end-to-end.
+
+Which one do you like, or would you like me to adjust further?
+
+second one. also if i started in 2008, how many years of experience now?
+3:51 PM
+
+2008 to now (2026) is 18 years. Let me update that:
+
+bash
+cp /home/claude/preview.html /mnt/user-data/outputs/preview.html
+
+Output
+exit code 0
+
+Done! Updated to 18 years and now leads with billing systems expertise. You'll also need to update this in your _config.yml file - it's probably in the resume_header_intro or similar field.
+Preview
+Code · HTML 
+
+Can you add a social link called "curl" it should be the first one and just output this file. that's probably a stretch to do in jekyll
+3:53 PM
+
+bash
+cp /home/claude/preview.html /mnt/user-data/outputs/preview.html
+
+Output
+exit code 0
+
+Done! Added [curl] as the first link pointing to https://bryanmikaelian.com/resume.txt.
+
+For Jekyll, you'll need to:
+
+    Add this to your _config.yml:
+
+yaml
+
+resume_social_links:
+  resume_curl_url: 'https://bryanmikaelian.com/resume.txt'
+  resume_github_url: 'https://github.com/bryanmikaelian'
+  # ... rest of your links
+
+    Update _includes/icon-links.html to add the curl link at the top (before GitHub):
+
+html
+
+<!-- Curl link -->
+{% if site.resume_social_links.resume_curl_url %}
+<li class="icon-link-item"><a href="{{ site.resume_social_links.resume_curl_url }}" class="icon-link" itemprop="url">curl</a></li>
+{% endif %}
+
+And yeah, generating that plain text file from Jekyll would be... interesting. You'd probably want to create it separately or write a custom generator plugin.
+Preview
+Code · HTML 
+
+bah, ill do that later
+3:55 PM
+
+Ha, fair enough! Let's keep moving. What else do you want to update on the resume?
+
+I probably need to put something about aptible...ive been here a short time. the reason why id even consider leaving is we got acquired and our new benefits are shit
+3:56 PM
+
+Got it. So you want to add something for Aptible that's honest but professional. A few options:
+
+Option 1 (Neutral/vague):
+
+Early-stage contributions to platform infrastructure. Currently evaluating long-term fit following recent organizational changes.
+
+Option 2 (More specific about what you did):
+
+Contributing to platform infrastructure and deployment tooling. Working on [specific thing you've been doing].
+
+Option 3 (Just leave it minimal):
+
+Platform engineer working on infrastructure and deployment systems.
+
+Option 4 (Skip it entirely for now): Just remove the Aptible entry altogether until you have something more substantial to say, or until you know you're definitely leaving.
+
+Which direction feels right? Or do you have something specific you've been working on there that we could highlight?
+
+    THe main project I launched was Point-in-time recovery for our Postgres solution
+
+3:56 PM
+
+Perfect! Let me update it with that:
+
+bash
+cp /home/claude/experience.yml /mnt/user-data/outputs/experience.yml
+
+Output
+exit code 0
+
+Done! Added the point-in-time recovery project and kept it professional with the "evaluating long-term fit" line. Also fixed the spacing in "CA (Remote)" while I was at it.
+Preview
+Code · HTML 
+Experience
+YML 
+
+I've also been doing a lot of data warehouse cleanup because the current ETL process is...well...its a process
+3:57 PM
+
+Want to add that too? Something like:
+
+Option 1 (Brief):
+
+Launched point-in-time recovery for Postgres solution, enabling customers to restore databases to any specific moment. Leading data warehouse cleanup and ETL optimization efforts. Currently evaluating long-term fit following recent organizational changes.
+
+Option 2 (More detail):
+
+Launched point-in-time recovery for Postgres solution, enabling customers to restore databases to any specific moment. Spearheading data warehouse cleanup initiative to address inefficiencies in current ETL processes. Currently evaluating long-term fit following recent organizational changes.
+
+Option 3 (Bullet points):
+
+Early-stage contributions include:
+<ul class="resume-item-list">
+<li>Launched point-in-time recovery for Postgres solution, enabling customers to restore databases to any specific moment</li>
+<li>Leading data warehouse cleanup and ETL optimization efforts</li>
+</ul>
+Currently evaluating long-term fit following recent organizational changes.
+
+Which style works better for you?
+
+2 but i wouldnt call out long term fit stuff. ill just tell the recruiter
+3:57 PM
+
+Smart call. Let me update it:
+
+bash
+
+cp /home/claude/preview.html /mnt/user-data/outputs/preview.html
+cp /home/claude/experience.yml /mnt/user-data/outputs/experience.yml
+
+Output
+exit code 0
+
+Perfect! Clean and professional. Shows what you've accomplished without any drama. You can save the real talk for the recruiter call.
+Preview
+Code · HTML 
+Experience
+YML 
+
+also liked the bit about a Platform Backend engineer
+3:58 PM
+
+Want to change the title from "Senior Software Engineer II" to "Platform Backend Engineer" or add that to the description?
+
+Like:
+
+    Change job title to: Platform Backend Engineer (or Sr Platform Backend Engineer)
+    Or keep the official title but add it to description: "Platform backend engineer focused on..."
+
+Which way do you want to go?
+
+add to description
+3:59 PM
+
+bash
+
+cp /home/claude/preview.html /mnt/user-data/outputs/preview.html
+cp /home/claude/experience.yml /mnt/user-data/outputs/experience.yml
+
+Output
+exit code 0
+
+Done! Added "Platform backend engineer focused on infrastructure and data systems." to lead off the description.
+Preview
+Code · HTML 
+Experience
+YML 
+
+not to go off the rails but i wonder if there is a product here. you upload a resume, i generate a self-hosted man -styled resume
+4:00 PM
+
+That's actually a pretty cool idea! The nostalgia factor alone would get attention from the right crowd (devs, SREs, platform engineers). A few angles:
+
+Simple version:
+
+    Upload resume (PDF/docx/markdown)
+    Get back a static HTML man page + optional Jekyll theme
+    One-click deploy to GitHub Pages or Vercel
+
+Spicier version:
+
+    Actually make it work with man command locally
+    Host at something like man.yourname.dev
+    Set up proper man page formatting (troff/groff)
+    curl man.yourname.dev/bryan | man -l - actually works
+
+Premium features:
+
+    Custom man page sections (BUGS, SEE ALSO, etc.)
+    ASCII art header generation
+    Export to actual .1 man page format
+    Terminal-themed PDF generation
+
+The audience is probably small but passionate - exactly the kind of people who'd pay $10-20 for something like this. Plus it's a great demo of your own skills.
+
+Want to keep working on your resume or explore this idea more?
+
+the biggest unknown is extracting PDFs...markdown should be easy ish
+4:01 PM
+
+Yeah, PDF extraction is always a pain. A few approaches:
+
+PDF → Structured Data:
+
+    pypdf2/PyPDF2 - basic text extraction, loses structure
+    pdfplumber - better table/layout detection
+    Adobe PDF Services API - actually pretty good at preserving structure, costs money
+    AWS Textract - solid but overkill for resumes
+    Unstructured.io - specifically built for this, has good resume detection
+
+Honestly though: Most people with man-page-worthy taste probably have their resume in markdown already, or would happily convert it. You could:
+
+    Launch with markdown only - lowest barrier, fastest to market
+    Add a "paste text" option - handles copy/paste from any format
+    Make PDF→markdown a "premium" feature later using something like Unstructured or Claude's PDF reading
+
+The harder problem might be the semantic extraction - understanding what's a job title vs company vs date vs description. That's where an LLM actually helps a lot.
+
+You could even use Claude API to:
+
+User uploads markdown → Claude extracts structured data → Generate man page
+
+Want to keep updating the resume or sketch out how this would work?
+
+yea the venn diagram of docx resumes and man page users is two circles
+4:01 PM
+
+😂 Exactly. Anyone who wants a man page resume either:
+
+    Already has it in markdown/LaTeX
+    Would gleefully rewrite it in markdown for this
+    Is copy-pasting from LinkedIn anyway
+
+So yeah, start with markdown + plain text paste. Maybe add a "Convert my Word doc" button later that just uses Claude API to extract and structure it. But that's v2 at best.
+
+Alright, back to your actual resume - anything else you want to update?
+
+So ive pushed all this stuff to https://resume.bryanmikaelian.com/. .. looking at that, how would you generate the markdown for README.md on github.com/bryanmikaelian/bryanmikaelian/README.md
+7:47 PM
+
+Looking at your resume, I'd structure the GitHub profile README differently - more casual/personal than the formal resume. Something like:
+markdown
+
+### Hey 👋
+
+I'm Bryan - a backend engineer who's spent the last ~18 years building billing systems, usage-based infrastructure, and high-scale APIs.
+
+Currently at Aptible working on Postgres point-in-time recovery and cleaning up some gnarly ETL pipelines.
+
+**Things I've built:**
+- [Venn](https://github.com/vennbilling/venn) - Open source billing platform in Clojure
+- [Scrollwork](https://github.com/vennbilling/scrollwork) - Sidecar agent for assessing AI prompt costs
+
+**Recent highlights:**
+- Reduced billing job runtime from 8 hours → 3 minutes (96% improvement) at Netlify
+- Migrated payment processing from Braintree to Stripe with zero customer impact
+- Mentored 4 engineers who got promoted to Staff level
+
+**Tech I work with:** Ruby, Golang, Clojure, Kafka, ClickHouse, Postgres, AWS
+
+📄 [Full resume](https://resume.bryanmikaelian.com) • 💼 [LinkedIn](https://linkedin.com/in/bryanmikaelian) • 🐦 [Twitter](https://twitter.com/bryanmikaelian)
+
+Want me to refine this or go in a different direction? (More technical? More personality? Include specific looking-for-work status?)
+
+well the idea is to take the format on github and generate the resume i have on my site
+7:48 PM
+
+Oh! You want to take the GitHub profile README format and auto-generate it FROM the resume data you already have on your site?
+
+So like:
+
+    You maintain experience.yml, projects.yml, etc. in your resume repo
+    A script/action reads those files
+    Generates the GitHub profile README.md automatically
+
+That makes way more sense. Want me to create a script that:
+
+    Reads your Jekyll _data/*.yml files
+    Generates a markdown README in GitHub profile format
+    Could run as a GitHub Action to keep it in sync?
+
+even simpler. just markdown that can be easily converted to my resume style
+7:48 PM
+
+Ah got it - you want the content in markdown format that maps cleanly to your resume's structure, so you can easily convert it with your Jekyll theme.
+
+Let me generate that:
+
+bash
+cp /home/claude/RESUME.md /mnt/user-data/outputs/RESUME.md
+
+Output
+exit code 0
+
+There you go! Clean markdown that follows the same structure as your resume site. The formatting is simple enough that it should convert easily to your Jekyll theme, and it's also readable as-is on GitHub or anywhere else.
+Resume
+Document · MD 
+
+so the idea is the markdown on github goes through some processor to output the styles of a manpage like resume.bryanmikaelian.com. it's a fun project i want to build
+7:49 PM
+
+Ohhhh now I get it! You want to build a tool that:
+
+    Takes markdown (like a GitHub profile README)
+    Runs it through a processor/converter
+    Outputs a styled man page resume like what you have at resume.bryanmikaelian.com
+
+So it's like a markdown → man page resume generator. The workflow would be:
+
+README.md → [Your Tool] → Static HTML with man page CSS
+
+Could work a few ways:
+
+Option 1: CLI tool
+bash
+
+manpage-resume generate README.md -o output/
+# Generates index.html + CSS with man page styling
+```
+
+**Option 2: Web service**
+```
+Upload/paste markdown → Preview → Download/Deploy
+
+Option 3: GitHub Action
+yaml
+
+# .github/workflows/resume.yml
+- uses: bryanmikaelian/manpage-resume@v1
+  with:
+    input: README.md
+    output: docs/
+# Auto-deploys to GitHub Pages
+
+The parser would need to understand resume structure in markdown (sections, dates, bullet points) and map it to your man page HTML template.
+
+This is actually super marketable - "Turn your GitHub README into a professional man page resume in 30 seconds"
+
+Want to sketch out what the markdown structure/conventions should be?
+
+yep. can you first fix the style to in the preview to go back to what we had
+7:50 PM
+
+You mean go back to the original color scheme/fonts from before the man page redesign? Or just fix something specific in the current man page theme?
+
+What needs fixing?
+
+original color and fonts
+7:50 PM
+
+Got it - you want to revert back to the original blue/gray color scheme with the nice fonts (Lato, etc.) instead of the black/white monospace man page theme?
+
+Just to confirm before I redo everything - you want the original styling back for your actual resume site, and then use the man page theme as the basis for your new project/tool?
+
+yep
+7:50 PM
+
+Perfect! Let me restore the original theme files. I'll need to recreate the original color scheme and fonts.
+Failed to create Variables
+
+nope, go back to the man page style
+7:51 PM
+
+Oh! You want to keep the man page style. So what did you mean by "fix the style to go back to what we had"?
+
+What specifically needs to be fixed in the current man page preview?
+
+oh im dumb. im looking at the file generated. thats the MD file
+7:51 PM
+
+😂 Yeah, that's just the markdown! You need to open the preview.html file to see the actual styled version with the man page theme.
+
+The RESUME.md is just the raw content - preview.html has all the CSS and styling baked in.
+
+how do i software
+7:51 PM
+
+😂 You're doing fine!
+
+Just double-click preview.html and it'll open in your browser with all the man page styling.
+
+The .md file is for your "turn markdown into man page resume" project idea.
+
+wait, where is preview.html?
+7:51 PM
+
+It should be in the outputs folder I created earlier - you would have downloaded it along with all the other files (_sass, _includes, etc.).
+
+Check wherever you downloaded the files to. If you didn't download them yet, I can regenerate it for you. Want me to create a fresh preview.html and give it to you again?
+
+yep, it was hidden. found it
+7:52 PM
+
+Nice! So you're seeing the man page styled resume now? How's it looking?
+
+yea that looks good. is this typical man page styles?
+7:52 PM
+
+Pretty close! Real man pages have a few more quirks:
+
+What we nailed:
+
+    Monospace font (Courier/terminal style)
+    Black text on white
+    Simple horizontal rules for sections
+    Uppercase section headers
+    Left-aligned, no-nonsense layout
+
+What real man pages also have:
+
+    Header/footer with page name and section number (e.g., "BRYAN(1)" at top)
+    Indented subsections with specific spacing rules
+    Bold for command names, italic for variables
+    "SEE ALSO", "BUGS", "AUTHOR" sections
+    Sometimes underlined text (old school terminal style)
+    Very specific typesetting from groff/troff
+
+Yours is more "man page inspired" - clean and readable in a browser while capturing that technical documentation aesthetic. Real man pages can be pretty ugly in raw form since they're designed for terminal rendering.
+
+Want to add any more man page-isms like a header showing "BRYAN(1)" or "SEE ALSO" section?
+
+yea let's try it and see. worse case, go back to what we have
+7:53 PM
+
+Cool! Let me add some classic man page elements:
+
+bash
+cp /home/claude/preview.html /mnt/user-data/outputs/preview.html
+
+Output
+exit code 0
+
+Done! Added classic man page elements:
+
+    Header: BRYAN(1)     User Commands     BRYAN(1) at the top
+    SEE ALSO section: Lists your links in man page reference format (with the (1) section numbers)
+    Footer: Bryan Mikaelian     January 2026     BRYAN(1) at the bottom
+
+The (1) means "user commands" section - standard man page convention.
+
+Check it out and let me know if it's too much or if you want to tweak it!
+Preview
+Code · HTML 
+
+maybe instead of dividers, we use indention like man pages?
+7:54 PM
+
+Good idea! Let me update it to use indentation instead of borders:
+
+bash
+cp /home/claude/preview.html /mnt/user-data/outputs/preview.html
+
+Output
+exit code 0
+
+Done! Removed all the borders and added indentation (3rem left margin) to all content items. Now it has that classic man page look with:
+
+    Section headers flush left
+    Content indented underneath
+    No dividing lines
+    Cleaner, more authentic man page aesthetic
+
+Check it out!
+Preview
+Code · HTML 
+
+the objective should be DESCRIPTION
+7:55 PM
+
+bash
+cp /home/claude/preview.html /mnt/user-data/outputs/preview.html
+
+Output
+exit code 0
+
+Done! Changed it from executive-summary to a proper DESCRIPTION section, which is much more man page appropriate. Now it flows like:
+
+NAME
+     Bryan Mikaelian - Staff Backend Engineer
+
+DESCRIPTION
+     Backend engineer with over 18 years...
+
+Preview
+Code · HTML 
+
+NAME for my name
+7:56 PM
+
+bash
+cp /home/claude/preview.html /mnt/user-data/outputs/preview.html
+
+Output
+exit code 0
+
+Perfect! Now it follows proper man page structure:
+
+NAME
+     Bryan Mikaelian - Staff Backend Engineer
+
+DESCRIPTION
+     Backend engineer with over 18 years...
+
+EXPERIENCE
+     ...
+
+The NAME section is now a proper header with everything indented underneath, just like a real man page!
+Preview
+Code · HTML 
+
+SYNOPSIS should be something like finger resume.bryanmikaelian.com (can finger do that?)
+7:57 PM
+
+Haha, finger is an old protocol that's mostly dead, but technically yes! You could set up a finger server. Though these days you'd more likely do:
+
+curl resume.bryanmikaelian.com
+
+or even more man page-ish:
+
+man bryan
+
+Want me to add a SYNOPSIS section? Could do something like:
+
+SYNOPSIS
+     curl resume.bryanmikaelian.com
+     finger bryan@bryanmikaelian.com
+     man bryan
+
+Or just stick with one? What feels right?
+
+lets ditch that. I also think the name section should be my name. Email should be under the "see more" section" too
+7:58 PM
+
+Got it! So:
+
+    NAME section = just "Bryan Mikaelian"
+    Move email + contact info to SEE ALSO section
+
+Let me update:
+
+bash
+cp /home/claude/preview.html /mnt/user-data/outputs/preview.html
+
+Output
+exit code 0
+
+Done! Now it's much cleaner:
+
+NAME section just has: "Bryan Mikaelian - Staff Backend Engineer"
+
+SEE ALSO section has all contact info (email, phone, location) plus the social links
+
+Much more authentic man page structure!
+Preview
+Code · HTML 
+
+can just say backend engineer
+7:59 PM
+
+bash
+cp /home/claude/preview.html /mnt/user-data/outputs/preview.html
+
+Output
+exit code 0
+
+Done! Now it just says "Bryan Mikaelian - Backend Engineer"
+Preview
+Code · HTML 
+
+does see also typically have contact info?
+7:59 PM
+
+No, you're right - SEE ALSO in real man pages is just for references to other man pages or related documentation. Contact info would more typically go in:
+
+AUTHOR section (most common for contact)
+
+AUTHOR
+     Bryan Mikaelian <bryan.mikaelian@gmail.com>
+
+Or BUGS section (sometimes has contact for reporting issues)
+
+Or just keep contact minimal in SEE ALSO with links only, no phone/address.
+
+What do you prefer?
+
+author works. ditch my address too
+8:00 PM
+
+bash
+cp /home/claude/preview.html /mnt/user-data/outputs/preview.html
+
+Output
+exit code 0
+
+Perfect! Now it's proper man page structure:
+
+AUTHOR
+
+    Bryan Mikaelian bryan.mikaelian@gmail.com
+
+SEE ALSO
+
+    Just the reference links (curl, github, twitter, etc.)
+
+Much more authentic!
+Preview
+Code · HTML 
+
+ditch curl, twitter, website from see also
+8:00 PM
+
+bash
+cp /home/claude/preview.html /mnt/user-data/outputs/preview.html
+
+Output
+exit code 0
+
+Done! SEE ALSO now just has github(1) and linkedin(1). Clean and minimal.
+Preview
+Code · HTML 
+
+alright, dump this out to whatever the hell i need to put in jekyll
+8:01 PM
+
+Let me create all the updated Jekyll files you need:
+
+Now let me create the updated layout file for the man page structure:
+
+Now let me update the _config.yml to add the description section setting:
+
+Now let me copy everything to outputs:
+
+bash
+
+# Copy all updated files to outputs
+cp /home/claude/_sass/_resume.scss /mnt/user-data/outputs/_sass/_resume.scss
+cp /home/claude/_layouts/resume.html /mnt/user-data/outputs/_layouts/
+mkdir -p /mnt/user-data/outputs/_layouts
+cp /home/claude/_layouts/resume.html /mnt/user-data/outputs/_layouts/resume.html
+cp /home/claude/_config.yml /mnt/user-data/outputs/_config.yml
+cp /home/claude/experience.yml /mnt/user-data/outputs/experience.yml
+
+echo "Files copied successfully!"
+ls -la /mnt/user-data/outputs/
+
+ugh hold the phone
+8:02 PM
+
+What's up?
+
+why am i using jekyll? cant i just use a static site
+8:03 PM
+
+You absolutely can! Jekyll is adding a ton of complexity for what's basically just one static HTML page.
+
+You could just:
+
+    Use the preview.html file directly
+    Host it as index.html on GitHub Pages, Vercel, Netlify, wherever
+    Done
+
+Way simpler. No build step, no Ruby, no YAML data files. Just HTML + CSS.
+
+Want me to clean up the preview.html to be a proper standalone index.html you can just deploy?
+
+yea perfect. remember the goal is to go README.md => some black box of magic => this page
+8:03 PM
+
+Perfect! So the flow is:
+
+README.md → [converter tool you'll build] → index.html (man page styled)
+
+For now, let me just give you a clean standalone index.html with all your current content and the man page styling. This becomes your "reference implementation" - what the converter should produce.
+
+bash
+cp /home/claude/index.html /mnt/user-data/outputs/index.html
+
+Output
+exit code 0
+
+Perfect! index.html is ready to go. Just upload it anywhere and you're done.
+
+Your project becomes:
+
+    Input: Markdown resume (like RESUME.md)
+    Parser: Extract sections (NAME, DESCRIPTION, EXPERIENCE, etc.)
+    Output: HTML like this index.html with man page styling
+
+No Jekyll, no build process, just beautiful simplicity.
+Index
+Code · HTML 
+
+can the header be updated to BRYAN MIKAELIAN
+8:04 PM
+
+bash
+cp /home/claude/index.html /mnt/user-data/outputs/index.html
+
+Output
+exit code 0
+
+Done! Updated both the header and footer to show BRYAN MIKAELIAN(1) instead of just BRYAN(1).
+Index
+Code · HTML 
+
+need a favicon too. i guess whatever icon works for a manpage? shrug
+8:05 PM
+
+How about a simple terminal/command prompt icon? Or we could do:
+
+    Terminal window - classic for man pages
+    >_ prompt symbol - minimalist
+    monospaced letter "B" - personal but still tech-y
+    📄 document icon - classic man page vibes
+
+Want me to generate a simple SVG favicon? I'm thinking a black square with white monospace text showing >_ or man in Courier?
+
+prompt symbol is great
+8:06 PM
+
+bash
+
+cp /home/claude/favicon.svg /mnt/user-data/outputs/favicon.svg
+cp /home/claude/index.html /mnt/user-data/outputs/index.html
+
+Output
+exit code 0
+
+Perfect! Created a simple black square with white >_ in monospace font. Classic terminal prompt aesthetic. Just drop both index.html and favicon.svg in the same directory and you're good to go!
+Favicon
+Image · SVG 
+Index
+Code · HTML 
+
+alright. now the fun. the goal is to take this from my readme to a page like this. what would the markdown look like for README>md
+8:09 PM
+
+Let me create a markdown structure that maps cleanly to the man page sections:
+
+bash
+cp /home/claude/README.md /mnt/user-data/outputs/README.md
+
+Output
+exit code 0
+
+Perfect! The markdown structure is:
+
+Simple conventions:
+
+    # Name at top (becomes NAME section with title on same line after dash)
+    ## SECTION for major sections (all caps = man page sections)
+    ### Company — *Location* for jobs/education/projects
+    **Role** for positions
+    Bullet lists work as-is
+    ### Subsection under SKILLS for categories
+    Email in AUTHOR uses angle brackets: <email>
+    Links in SEE ALSO are just markdown links
+
+Your converter just needs to:
+
+    Parse the markdown
+    Extract sections by ## SECTION headers
+    Apply the CSS/HTML structure from index.html
+    Done!
+
+Readme
+Document · MD 
+
+printing seems to be multiple pages...that probably isn't good but what can you do
+8:12 PM
+
+Yeah, print layouts are tricky. We could try a few things to make it more print-friendly:
+
+Quick fixes:
+
+    Reduce font sizes for print
+    Tighten spacing/margins
+    Remove the header/footer on print
+    Force single page (though might get tiny)
+
+Or just accept it:
+
+    Most resumes are 2+ pages these days anyway
+    Print to PDF and it looks fine
+    If someone's printing it, they probably want the detail
+
+Want me to add some print-specific CSS to try to compress it, or just leave it as-is? The web version is what matters most anyway.
+
+it's 4 pages. maybe we tighten up the fonts
+8:13 PM
+
+4 pages is rough. Let me tighten up the print styles:
+
+bash
+cp /home/claude/index.html /mnt/user-data/outputs/index.html
+
+Output
+exit code 0
+
+Done! Tightened up the print styles significantly:
+
+    Smaller base font (10px instead of 11px)
+    Reduced all margins and padding
+    Smaller section headers
+    Tighter line heights
+    Less indentation (2rem instead of 3rem)
+
+Should get you down to 2-3 pages. If you need it even tighter, we could go more aggressive, but it'll start getting pretty cramped.
+Index
+Code · HTML 
+
+cool, yea, let me try that
+8:14 PM
+
+
+Claude is AI and can make mistakes. Please double-check responses.
+Index · HTML
 <!DOCTYPE html>
 <html>
 <head>
@@ -215,6 +1919,77 @@
     .no-print {
       /* These would be hidden in print */
     }
+    
+    @media print {
+      body { 
+        font-size: 10px; 
+        line-height: 1.3;
+      }
+      
+      .page-header {
+        padding: 0.5rem 0;
+      }
+      
+      .header-name {
+        font-size: 1.2rem !important;
+      }
+      
+      .section-header {
+        margin-bottom: 0.5rem;
+      }
+      
+      .section-header h2 { 
+        font-size: 1rem; 
+        margin-bottom: 0.3rem;
+      }
+      
+      .content-section {
+        margin: 0 0 1rem;
+      }
+      
+      .resume-item { 
+        margin-bottom: 0.75rem !important;
+        margin-left: 2rem !important;
+      }
+      
+      .resume-item-title {
+        font-size: 0.9rem;
+        line-height: 1.2;
+        margin-bottom: 0.2rem;
+      }
+
+      .resume-item-details {
+        font-size: 0.8rem;
+        margin: 0 0 0.3rem;
+        line-height: 1.2;
+      }
+      
+      .resume-item-copy {
+        margin: 0.3rem 0 0;
+      }
+      
+      .resume-item-list {
+        margin: 0.3rem 0;
+        padding-left: 1.5rem;
+      }
+      
+      .resume-item-list li {
+        margin-bottom: 0.2rem;
+      }
+      
+      .page-footer {
+        padding-top: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      
+      a {
+        text-decoration: none;
+      }
+      
+      .no-print { 
+        display: none !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -368,3 +2143,4 @@
   </div>
 </body>
 </html>
+
