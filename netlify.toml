@@ -1,0 +1,7 @@
+  [[redirects]]                                                                                             
+    from = "/*"                                                                                             
+    to = "https://manpage.dev/bryanmikaelian"                                                               
+    status = 301                                                                                            
+    force = true                                                                                            
+    [redirects.conditions]                                                                                  
+      Host = ["resume.bryanmikaelian.com"]    
